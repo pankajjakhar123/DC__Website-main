@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Example</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+<body>
+  <div id="like_button_container">zxcvbnhbvcxcvb</div>
+sdfghjn
+  <script>
+    const domContainer = document.querySelector('#like_button_container');
+
+    function like() {
+      console.log('Liked');
+    }
+    
+    function LikeButton() {
+      return (
+        <button onClick={like}>Like</button>
+      );
+    }
+
+    const root = ReactDOM.createRoot(domContainer);
+    root.render(<LikeButton />);
+  </script>
+</body>
+</html>

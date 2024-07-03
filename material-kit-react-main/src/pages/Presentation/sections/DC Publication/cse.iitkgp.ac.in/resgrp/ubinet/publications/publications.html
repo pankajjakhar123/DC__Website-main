@@ -1,0 +1,747 @@
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./favicon.jpeg">
+    <title>
+        UbiSys@CSE,IITKGP
+    </title>
+    <style>
+        .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown-btn {
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 28%;
+      background-color: #f9f9f9;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      white-space: nowrap; /* Prevent line breaks */
+    }
+
+    /* Style for dropdown content items */
+    .dropdown-item {
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+      color: #333;
+    }
+
+    /* Style for horizontal layout */
+    .dropdown-content.horizontal {
+      display: flex;
+      flex-direction: row;
+    }
+
+    /* Adjust item styles for horizontal layout */
+    .dropdown-content.horizontal .dropdown-item {
+      padding: 12px;
+    }
+      .dropbtn {
+  background-color: #0096FF;
+  color: white;
+  width: 150px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10%;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #0096FF;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  
+  min-width: 23px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+         #search-panel {
+      position: relative;
+      display: inline-block;
+    }
+
+    #options-list {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 300px;
+      z-index: 1;
+    }
+
+    #options-list li {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    #options-list li:hover {
+      background-color: #f0f0f0;
+    }
+
+    .result {
+      display: none;
+    }
+
+    .result.active {
+      display: block;
+    }
+.show {display: block;}
+
+.show {display: block;}
+        /* Add styles for the buttons */
+        .filtering-button a.btn {
+           
+            background-color: #0096FF;
+        }
+        .custom-button {
+            background-color: transparent; /* Transparent background color */
+            color: #666666; /* Grey text color */
+            padding: 1px 4px; /* Adjust padding as needed */
+            border: 1px solid #666666; /* Grey border */
+            border-radius: 10px; /* Rounded corners */
+            cursor: pointer;
+            transition: background-color 0.3s; /* Add transition for smooth color change */
+           
+        }
+    
+        /* Style for the button on mouseover */
+        .custom-button:hover {
+            background-color: #0096FF; 
+            color: #ffffff; 
+        }
+    </style>
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+    <!-- Nucleo Icons -->
+    <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
+    <script>
+        function openURL(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+    
+    
+    <script>
+        function openURL(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+</head>
+
+<body class="about-us bg-gray-200">
+    <!-- Navbar Transparent -->
+    <nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3  navbar-transparent ">
+        <div class="container">
+            <a class="navbar-brand  text-white " href="../index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+        <b>UbiSys@CSE,IITJ</b>
+      </a>
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon mt-2">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </span>
+      </button>
+            <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
+                <ul class="navbar-nav navbar-nav-hover ms-auto">
+                    <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-6">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="../index.html">
+              <i class="material-icons opacity-6 me-2 text-md">dashboard</i>
+              Home
+              <!--<img src="assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-2 d-lg-block d-none">
+              <img src="assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-2 d-lg-none d-block">-->
+            </a>
+                    </li>
+                    <li class="nav-item dropdown dropdown-hover mx-2">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="./index.html">
+              <i class="material-icons opacity-6 me-2 text-md">view_day</i>
+              Publications
+              <!--<img src="assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-2 d-lg-block d-none">-->
+              <!--<img src="assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-2 d-lg-none d-block">-->
+            </a>
+                    </li>
+                    <li class="nav-item dropdown dropdown-hover mx-2">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons opacity-6 me-2 text-md">article</i>
+              Research Areas
+              <img src="../assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-2 d-lg-block d-none">
+              <img src="../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-2 d-lg-none d-block">
+            </a>
+                        <ul class="dropdown-menu dropdown-menu-animation dropdown-menu-end dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
+                            <div class="d-none d-lg-block">
+                                <ul class="list-group">
+                                    <li class="nav-item list-group-item border-0 p-0">
+                                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="../pages/research_sensing.html">
+                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Sensing</h6>
+                                            <span class="text-sm">Smartphones, Wearables, Sensors</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item list-group-item border-0 p-0">
+                                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="../pages/research_hci.html">
+                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Computer Human Interaction</h6>
+                                            <span class="text-sm">Assistive Systems, Human Machine Interfacing</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item list-group-item border-0 p-0">
+                                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="../pages/research_ds.html">
+                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Distributed Systems</h6>
+                                            <span class="text-sm">Cloud, Edge, Blockchains</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item list-group-item border-0 p-0">
+                                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="../pages/research_network.html">
+                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Networking</h6>
+                                            <span class="text-sm">Protocols, Quality, Applications</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="row d-lg-none">
+                                <div class="col-md-12 g-0">
+                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="../pages/research_sensing.html">
+                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Sensing</h6>
+                                        <span class="text-sm">Smartphones, Wearables, Sensors</span>
+                                    </a>
+                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="../pages/research_hci.html">
+                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Computer Human Interaction</h6>
+                                        <span class="text-sm">Assistive Systems, Human Machine Interfacing</span>
+                                    </a>
+                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="../pages/research_ds.html">
+                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Distributed Systems</h6>
+                                        <span class="text-sm">Cloud, Edge, Blockchains</span>
+                                    </a>
+                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="../pages/research_network.html">
+                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Networking</h6>
+                                        <span class="text-sm">Protocols, Quality, Applications</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown dropdown-hover mx-2">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="../pages/projects.html">
+                            
+              <i class="fa fa-handshake me-1"></i>
+              Sponsored Projects
+              <!--<img src="assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-2 d-lg-block d-none">
+              <img src="assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-2 d-lg-none d-block">-->
+              
+            </a>
+            <!-- Assuming you have React Router set up in your application -->
+<li class="nav-item dropdown dropdown-hover mx-2">
+    <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="javascript:void(0);" onclick="openPresentation()">
+        <i class="material-icons opacity-6 me-2 text-md">view_day</i>
+        Courses
+    </a>
+</li>
+
+<script>
+    function openPresentation() {
+        // Use React Router to navigate to the presentation page
+        // You may need to import the necessary components and adjust the route based on your React Router setup
+        window.location.href = 'http://localhost:3000/presentation';
+
+        // Scroll down 1000 pixels after a short delay (adjust the delay as needed)
+        setTimeout(function () {
+            // Assuming you have a specific element to scroll to within the presentation page
+            const targetElement = document.getElementById('Courses');
+
+            // Use React's scrollIntoView to scroll to the target element
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 500);
+    }
+</script>
+
+            
+               </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- -------- START HEADER 7 w/ text and video ------- -->
+    <header class="bg-gradient-dark">
+        <div class="page-header min-vh-50" style="background-image: url('https://iitj.ac.in/dhs/assets/img/slide/3_slider.jpg');">
+            <span class="mask bg-gradient-dark opacity-6"></span>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center mx-auto my-auto">
+                        <h1 class="text-white">UbiSys Research Group</h1>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- -------- END HEADER 7 w/ text and video ------- -->
+    <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+        <!-- Section with four info areas left & one card right with image and waves -->
+        <section class="py-7">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="portfolio-page section">
+                            <div class="container">
+                                <div class="portfolio">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div id="search-panel">
+                                               <ul id="options-list"></ul>
+                                              </div>
+                                                                                    
+                                              <div class="filtering-button">
+                                                <div class="dropdown">
+                                                    
+                                                    <a><button onclick="toggleDropdown()" class="dropbtn">Publication</button></a>
+                                                    <input type="text" placeholder="Search.." id="myInput" onclick="handleInputClick(event)" oninput="filterButtons()">
+                                                    <a ><button onclick="applyCategoryFilter()" class="dropbtn">Filter</button></a>
+                                                    <div id="myDropdown" class="dropdown-content">
+                                                        <a class="btn btn-primary" data-filter="*" href="#All Publication"> All Publications</a>
+                                                        <a class="btn btn-secondary cat1" data-filter=".cat1" href="#Journal">Journal</a>
+                                                        <a class="btn btn-secondary cat2" data-filter=".cat2" href="#Conference (FULL)">Conference (Full)</a>
+                                                        <a class="btn btn-secondary cat3" data-filter=".cat3" href="#Conference (Poster)">Conference (Poster)</a>
+                                                        <a class="btn btn-secondary cat4" data-filter=".cat4" href="#Workshop">Workshop</a>
+                                                        <a class="btn btn-secondary cat5" data-filter=".cat5" href="#Network">Network</a>
+                                                        <a class="btn btn-secondary cat6" data-filter=".cat6" href="#HCI">HCI</a>
+                                                        <a class="btn btn-secondary cat7" data-filter=".cat7" href="#Distributed Systems">Distributed Systems</a>
+                                                        <a class="btn btn-secondary cat8" data-filter=".cat8" href="#Sensing">Sensing</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    <div class="service-area section">
+                                        <div class="container">
+                                            <div class="grid pub-list">
+                                                <ol>
+                                                    <div class="grid-item cat1 cat7" title="this is " description="DES 1">
+                                                        <li> Anirban Das, Navlika Singh, Suchetana Chakraborty, "UniPreCIS: A data pre-processing solution for collocated services on shared IoT",  in the Journal of Future Generation Computer Systems, Elsevier [Accepted] </a></em>.</li>  
+                                                                           
+                                                            <button class="custom-button" onclick="openURL('https://www.youtube.com')">Videos</button>
+                                                            <button class="custom-button" onclick="openURL('https://www.google.com')">DOI</button>
+                                                            <button class="custom-button" onclick="openURL('https://www.iitj.ac.in/')"> PDF</button>
+                                                            <button top-margin="-10px" class="custom-button" onclick="openURL('http://192.168.43.229:3001/users/1')">Project</button>
+                                                        </div>
+                                                        <div class="grid-item cat2 cat5">
+                                                            <li ><a href="http://192.168.43.229:3001/users/2">Link</a>
+                                                              Anirban Das, Navlika Singh, Suchetana Chakraborty, "UniPreCIS : A data pre-processing solution for collocated services on shared IoT",  CoRR abs/2208.01394 (2022) 
+                                                                <b></b> 
+                                                                <br>
+                                                                
+                                                                <!-- Buttons with styles -->
+                                                                <button style="margin-bottom: 20;" class="custom-button" onclick="openURL('https://www.youtube.com')">Videos</button>
+                                                                <button style="margin-bottom: 20;" class="custom-button" onclick="openURL('https://www.google.com')">DOI</button>
+                                                                <button style="margin-bottom: 20;" class="custom-button" onclick="openURL('https://www.iitj.ac.in/')">PDF</button>
+                                                                <button style="margin-bottom: 20;" class="custom-button" onclick="openURL('http://192.168.43.229:3001/users/2')">Project</button>
+                                                                
+                                                            </li>
+                                                        </div>
+                                                        
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    <div class="grid-item cat1 cat7">
+                                                        <br/>
+                                                        <li>
+                                                            Ramesh Singh, Radhika Sukapuram, Suchetana Chakraborty, "A survey of mobility aware Multi-access Edge Computing: Challenges, use cases and future directions ",  Ad Hoc Networks, Elsevier (2023): 103044., IF=4.8</li>
+                                                            <button class="custom-button" onclick="openURL('https://www.youtube.com')">Videos</button>
+                                                            <button class="custom-button" onclick="openURL('https://doi.org/10.1016/j.adhoc.2022.103044')">DOI</button>
+                                                            <button class="custom-button" onclick="openURL('https://www.iitj.ac.in/')">PDF</button>
+                                                            <button class="custom-button" onclick="openURL('http://192.168.43.229:3001/users/3')">Project</button>
+                                                            <br>
+                                                    </div>
+                                                    <div class="grid-item cat2 cat8">
+                                                        <br/>
+                                                        <li>Anirban Das, Sandip Chakraborty, Suchetana Chakraborty,<em> "Where Do All My Smart Home Data Go? Context-aware Data Generation and Forwarding for Edge-based Microservices over Shared IoT Infrastructure"</em>, <b>vol. 134, pages = 204-218, Future Generation Computer Systems, Elsevier, doi= https://doi.org/10.1016/j.future.2022.03.027, 2022, IF=7.187. </b> ,
+                                                           </li>
+                                                                <button class="custom-button"  onclick="openURL('https://www.youtube.com')">Videos</button>
+                                                            <button class="custom-button"  onclick="openURL('https://www.google.com')">DOI</button>
+                                                            <button class="custom-button"  onclick="openURL('https://www.iitj.ac.in/')">PDF</button>
+                                                            <button class="custom-button"  onclick="openURL('http://192.168.43.229:3001/users/4')">Project</button>
+                                                    </div>
+                                                    <div class="grid-item cat1 cat5">
+                                                        <br/>
+                                                        <li>Manan Sharma, Shivam Tiwari, Gaurav Ruhela, Suchetana Chakraborty, Dip Sankar Banerjee, "Deep Unsupervised Methods towards Behavior Analysis in Ubiquitous Sensor Data", Internet of Things Journal, Elsevier, IF=5.711. 2021. </b>                                                            (Accepted: February 03, 2023) <a href="https://ieeexplore.ieee.org/document/10056411" target="_blank">Early Access</a></li>
+                                                        <button class="custom-button" top-margin="-10px" onclick="openURL('https://www.youtube.com')">Videos</button>
+                                                            <button class="custom-button" top-margin="-10px" onclick="openURL('https://doi.org/10.1016/j.iot.2021.100486 ')">DOI</button>
+                                                            <button class="custom-button" top-margin="-10px" onclick="openURL('https://www.iitj.ac.in/')">PDF</button>
+                                                            <button class="custom-button" top-margin="-10px" onclick="openURL('http://192.168.43.229:3001/users/5')">Project</button>
+                                                    </div>
+                                                    <div class="grid-item cat1 cat5">
+                                                      <br/>
+                                                      <li><a>Akhirul Islam, Arindam Debnath, Manojit Ghosh, Suchetana Chakraborty, "A survey on task offloading in Multi-access Edge Computing", Journal of Systems Architecture, Elsevier, vol.= 118, pages = 102225, doi = https://doi.org/10.1016/j.sysarc.2021.102225, 2021. IF=5.836</b>                                                            (Accepted: February 03, 2023) <a href="https://ieeexplore.ieee.org/document/10056411" target="_blank">Early Access</a></li>
+                                                      <button class="custom-button" top-margin="-10px" onclick="openURL('https://www.youtube.com')">Videos</button>
+                                                          <button class="custom-button" top-margin="-10px" onclick="openURL('https://www.google.com')">DOI</button>
+                                                          <button class="custom-button" top-margin="-10px" onclick="openURL('https://www.iitj.ac.in/')">PDF</button>
+                                                          <button class="custom-button" top-margin="-10px" onclick="openURL('http://192.168.43.229:3001/users/6')">Project</button>
+                                                  </div>
+                                                    <div class="grid-item cat2 cat6 cat8">
+                                                        <br/>
+                                                        <li>Suchetana Chakraborty, Sandip Chakraborty, Sukumar Nandi and Sushanta Karmakar, "Impact of Redundant Sensor Deployment over Data Gathering Performance: A Model Based Approach", in Journal of Network and Computer Applications, Elsevier, pp. 26 - 42, vol. 67, 2016,. IF=7.57,
+                                                           ,
+                                                            <button class="custom-button" onclick="openURL('https://www.youtube.com')">Videos</button>
+                                                            <button class="custom-button" onclick="openURL('https://doi.org/10.1016/j.jnca.2016.03.012')">DOI</button>
+                                                            <button class="custom-button" onclick="openURL('https://www.iitj.ac.in/')">PDF</button>
+                                                            <button class="custom-button" onclick="openURL('http://192.168.43.229:3001/users/7')">Project</button>
+                                                    </div>
+                                                    <div class="grid-item cat1 cat6 cat8">
+                                                        <br/>
+                                                        <li>Suchetana Chakraborty, Sandip Chakraborty, Sukumar Nandi and Sushanta Karmakar, "Fault Resilience in Sensor Networks: Distributed Node-disjoint Multi-path Multi-sink Forwarding", in Journal of Network and Computer Applications, Elsevier, pp. 85 - 101, vol. 57, 2015. IF=7.57,
+                                                          
+                                                            
+                                                            <a href="https://www.youtube.com/watch?v=p5IqMn4Q7FM" target="_blank">Video teaser</a></li>
+                                                            <button class="custom-button" onclick="openURL('https://www.youtube.com')">Videos</button>
+                                                            <button class="custom-button" onclick="openURL('https://www.google.com')">DOI</button>
+                                                            <button class="custom-button" onclick="openURL('https://www.iitj.ac.in/')">PDF</button>
+                                                            <button class="custom-button" onclick="openURL('http://192.168.43.229:3001/users/8')">Project</button>
+                                                    </div>
+                                                    <div class="grid-item cat2 cat7">
+                                                        <br>
+                                                        <li>Suchetana Chakraborty, Sandip Chakraborty, Sushanta Karmakar, Sukumar Nandi<em>""Dynamic Tree Switching for Distributed Message-Passing Applications"</em>,  in Journal of Network and Systems Management, Springer, pp. 1 -- 40, vol. 23, issue 1, 2015.,
+                                                            <a href="https://github.com/usatpath01/DisProTrack" target="_blank">Source Code</a></li>
+                                                            <button top-margin="-10px"  class="custom-button" onclick="openURL('https://www.youtube.com')">Videos</button>
+                                                            <button top-margin="-10px"  class="custom-button" onclick="openURL('https://www.google.com')">DOI</button>
+                                                            <button top-margin="-10px"  class="custom-button" onclick="openURL('https://www.iitj.ac.in/')">PDF</button>
+                                                            <button top-margin="-10px"  class="custom-button" onclick="openURL('http://192.168.43.229:3001/users/9')">Project</button>
+                                                        
+                                                    </div>
+                                                    <div class="grid-item cat2 cat8">
+                                                        <br/>
+                                                        <li>Suchetana Chakraborty, Sandip Chakraborty, Sukumar Nandi and Sushanta Karmakar, "Topology Management Ensuring Reliability in Delay Sensitive Sensor Networks with Arbitrary Node Failures", in International Journal of Wireless Information Networks, Springer, pp. 262 - 289, vol. 21, issue 4, 2014.,</li>
+                                                                <button class="custom-button" onclick="openURL('https://www.youtube.com')">Videos</button>
+                                                            <button class="custom-button" onclick="openURL('https://www.google.com')">DOI</button>
+                                                            <button class="custom-button" onclick="openURL('https://www.iitj.ac.in/')">PDF</button>
+                                                            <button class="custom-button" onclick="openURL('http://192.168.43.229:3001/users/10')">Project</button>
+                                                    </div>
+                                                    <div class="grid-item cat2 cat7">
+                                                        <br>
+                                                        <li>Suchetana Chakraborty, Sandip Chakraborty, Sukumar Nandi and Sushanta Karmakar,<em> "ADCROSS: Adaptive Data Collection from Road Surveilling Sensors"</em> in IEEE Transactionson Intelligent Transportation Systems, pp. 2049 - 2062, vol. 15, no. 5, 2014
+                                                          </li>
+                                                            <button top-margin="-10px"  class="custom-button" onclick="openURL('https://www.youtube.com')">Videos</button>
+                                                            <button top-margin="-10px"  class="custom-button" onclick="openURL('https://www.google.com')">DOI</button>
+                                                            <button top-margin="-10px"  class="custom-button" onclick="openURL('https://www.iitj.ac.in/')">PDF</button>
+                                                            <button top-margin="-10px"  class="custom-button" onclick="openURL('http://192.168.43.229:3001/users/11')">Project</button>
+                                                        
+                                                    </div>
+                                                    
+                                                    <div class="grid-item cat3 cat6 cat8">
+                                                        <br/>
+                                                        <li> Suchetana Chakraborty, Sandip Chakraborty, Sukumar Nandi, Sushanta Karmakar, <em>"Convergecast Tree Management from Arbitrary Node Failure in Sensor Network"</em>, <b>in Ad Hoc Networks, Elsevier, pp. 1796 - 1819, vol. 11, issue 6, 2013.</b><br>
+                                                        <button top-margin="-10px"  class="custom-button" onclick="openURL('https://www.youtube.com')">Videos</button>
+                                                            <button top-margin="-10px"  class="custom-button" onclick="openURL('https://www.google.com')">DOI</button>
+                                                            <button top-margin="-10px"  class="custom-button" onclick="openURL('https://www.iitj.ac.in/')">PDF</button>
+                                                            <button top-margin="-10px"  class="custom-button" onclick="openURL('http://192.168.43.229:3001/users/12')">Project</button>
+                                                        </li>
+                                                       </div>
+                                                    <div class="grid-item cat2 cat5 cat1">
+                                                        <br>
+                                                        <li> Suchetana Chakraborty, Ferdous Barbhuiya, Ankush Rai, Arijit Sur, Santosh Biswas and Sukumar Nandi,  <em>"Topology Adaptive Computation of Distributed IDS Set for Detecting Attacks on STP"</em>, <b>in the Journal of Information Assurance and Security, ISSN 1554-1010, vol. 7, 2012.</b></li>
+                                                        <button top-margin="-5px" class="custom-button" onclick="openURL('https://www.youtube.com')">Videos</button>
+                                                            <button top-margin="-5px" class="custom-button" onclick="openURL('https://www.google.com')">DOI</button>
+                                                            <button top-margin="-5px"class="custom-button" onclick="openURL('https://www.iitj.ac.in/')">PDF</button>
+                                                            <button top-margin="-5px" class="custom-button" onclick="openURL('http://192.168.43.229:3001/users/13')">Project</button>
+                                                    </div>
+                                                   
+                                                   
+                                                    
+                                                   
+                                                    
+                                                   
+                                                   
+                                                   
+                                                    
+                                                        
+                                                    
+                                                   
+                                                    
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="load-more-btn text-center">
+                                            <!-- <a href="https://dblp.org/pid/28/9571.html" class="primary-btn" target="_blank">See all Publications</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- -------- END PRE-FOOTER 1 w/ SUBSCRIBE BUTTON AND IMAGE ------- -->
+    </div>
+    <footer class="footer pt-5 mt-5">
+        <div class="container">
+            <div class=" row">
+                
+                <div class="col-12">
+                    <div class="text-center">
+                        <p class="text-dark my-4 text-sm font-weight-normal">
+                            All rights reserved. Copyright ©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> by UbiSys@CSE,IITJ.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+    <script src="../assets/js/plugins/countup.min.js"></script>
+    <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+    <script src="../assets/js/plugins/parallax.min.js"></script>
+    <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+    <script src="../assets/js/material-kit.min.js?v=3.0.2" type="text/javascript"></script>
+
+
+    <script src="../assets/js/plugins/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/plugins/isotope.pkgd.min.js"></script>
+
+    <script>
+        // get the element to animate
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+    
+        function filterFunction() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          div = document.getElementById("myDropdown");
+          a = div.querySelectorAll(".dropdown-content a");
+    
+          for (i = 0; i < a.length; i++) {
+            if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+              a[i].style.display = "";
+            } else {
+              a[i].style.display = "none";
+            }
+          }
+        }
+    
+        function stopPropagation(event) {
+          event.stopPropagation();
+        }
+    
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+</script>
+    <script>
+        function handleInputClick(event) {
+            // Stop propagation to prevent the click event from reaching the document and closing the dropdown
+            stopPropagation(event);
+        
+            // Toggle the dropdown
+            toggleDropdown();
+        }
+        function toggleDropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+    
+        function filterButtons() {
+            var input, filter, div, a, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            div = document.getElementById("myDropdown");
+            a = div.querySelectorAll(".dropdown-content a");
+    
+            for (i = 0; i < a.length; i++) {
+                if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+    
+        function stopPropagation(event) {
+            event.stopPropagation();
+        }
+    
+        function applyFilter(filterClass) {
+            var div = document.getElementById("myDropdown");
+            var a = div.querySelectorAll(".dropdown-content a");
+    
+            for (var i = 0; i < a.length; i++) {
+                a[i].style.display = "none";
+            }
+    
+            var filteredElements = div.querySelectorAll('.dropdown-content ' + filterClass);
+            for (var i = 0; i < filteredElements.length; i++) {
+                filteredElements[i].style.display = "";
+            }
+    
+            // Apply the same filter to the grid items
+            var gridItems = document.querySelectorAll('.grid-item');
+            for (var i = 0; i < gridItems.length; i++) {
+                if (gridItems[i].classList.contains(filterClass.substring(1))) {
+                    gridItems[i].style.display = "";
+                } else {
+                    gridItems[i].style.display = "none";
+                }
+            }
+        }
+    
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        
+        var $grid = $('.grid').isotope({
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows',
+            transitionDuration: '.9s'
+        });
+    
+        function applyCategoryFilter() {
+            var selectedCategory = $('#myDropdown a.btn-primary').attr('data-filter');
+            $grid.isotope({ filter: selectedCategory });
+        }
+        function applyFilter(filterValue) {
+            $grid.isotope({ filter: filterValue });
+        }
+        
+    
+        function applySearchFilter(filterValue) {
+            $grid.isotope({
+                filter: function () {
+                    return $(this).text().toUpperCase().indexOf(filterValue.toUpperCase()) > -1;
+                },
+                transitionDuration: '.9s'
+              
+                
+            },
+            );
+        }
+        
+        $('.filtering-button').on('click', 'a', function () {
+            var filterValue = $(this).attr('data-filter');
+    
+            // Set the full name of the button as the search input value
+            if ($(this).attr('data-filter')) {
+                $('#myInput').val($(this).text());
+            }
+    
+            // Check if it's a search filter or category filter
+            
+            
+                // Apply category filter
+                applyCategoryFilter(filterValue);
+    
+    
+            // Toggle classes for styling
+            $('.filtering-button a').removeClass('btn-primary').addClass('btn-secondary');
+            $(this).addClass('btn-primary').removeClass('btn-secondary');
+        });
+    
+        // Additional function for handling search input changes
+        function handleSearchInput() {
+            var searchTerm = $(this).val();
+            applySearchFilter(searchTerm);
+        }
+    
+        function toggleDropdown() {
+            $('#myDropdown').toggleClass('show');
+        }
+    
+        $('#myInput').on('input', handleSearchInput);
+</script>
+</body>
+
+</html>

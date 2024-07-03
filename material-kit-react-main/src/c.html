@@ -1,0 +1,37 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Page with Dynamic Link</title>
+</head>
+<body>
+
+  <p>This is a link to the dynamically generated React page:</p>
+  <!-- Render the link dynamically using the global dynamicLink variable -->
+  <p><a href="#" id="reactLink" target="_blank" rel="noopener noreferrer">Click here</a></p>
+  <button onclick="f()">
+    Click Me To Get Student Details
+  </button>
+  <div>
+    <p id="text" style="color: purple; font-weight: bold; font-size: 20px;"></p>
+  </div>
+  <script type="text/javascript">
+    // Access the dynamically generated link from the global variable
+    function f() {
+      let name = window.dynamicLink;
+
+      let str = "Name:" + name;
+
+      document.getElementById('text').innerHTML = str;
+
+      // Open a new window or tab with the dynamic link
+     
+    }
+    // Set the href attribute of the anchor element
+    document.getElementById('reactLink').href = window.dynamicLink;
+  </script>
+
+</body>
+</html>
